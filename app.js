@@ -1,14 +1,19 @@
 let tickets_sold = 200;
 let venue_capacity = 200;
-let performer = "Oscar";
-let is_sold_out = tickets_sold >= venue_capacity;
+let performer = "oscar";
+let is_sold_out = tickets_sold > venue_capacity;
 let is_member = true;
 let user_points = 9;
 let user_name = "alex";
 
 if ((tickets_sold > venue_capacity) && (tickets_sold/tickets_sold == 1)) {
-    console.log("system error");
-} else if (is_sold_out === true) {
+    console.log("system error 1");
+} else if ((tickets_sold === venue_capacity) && (is_sold_out === false)) {
+    console.log("system error 2");
+} else if ((performer === "Alex Bymoen") && (is_sold_out === false)) {
+    console.log("system error 3");
+}
+ else if (is_sold_out === true) {
     console.log("all sold out");
 }
  else if (tickets_sold/venue_capacity >= 0.9 ) {
@@ -16,7 +21,7 @@ if ((tickets_sold > venue_capacity) && (tickets_sold/tickets_sold == 1)) {
 } else if (tickets_sold/venue_capacity >= 0.5) {
     console.log("tickets selling fast");
 } else {
-    console.log("tickets on sale now");
+    console.log("tickets on sale now and it's all good");
 }
 
 if ((is_member === true) && (user_points >= 90)) {
